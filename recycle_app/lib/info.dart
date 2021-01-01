@@ -14,29 +14,20 @@ class Info extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-              Expanded(
-                flex: 1,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical, //.horizontal
-                  padding: EdgeInsets.all(20),
-                  child: Text(
-                    "1 Description that is too long in text format(Here Data is coming from API) jdlksaf j klkjjflkdsjfkddfdfsdfds " +
-                        "2 Description that is too long in text format(Here Data is coming from API) d fsdfdsfsdfd dfdsfdsf sdfdsfsd d " +
-                        "3 Description that is too long in text format(Here Data is coming from API)  adfsfdsfdfsdfdsf   dsf dfd fds fs" +
-                        "4 Description that is too long in text format(Here Data is coming from API) dsaf dsafdfdfsd dfdsfsda fdas dsad" +
-                        "5 Description that is too long in text format(Here Data is coming from API) dsfdsfd fdsfds fds fdsf dsfds fds " +
-                        "6 Description that is too long in text format(Here Data is coming from API) asdfsdfdsf fsdf sdfsdfdsf sd dfdsf" +
-                        "7 Description that is too long in text format(Here Data is coming from API) df dsfdsfdsfdsfds df dsfds fds fsd" +
-                        "8 Description that is too long in text format(Here Data is coming from API)" +
-                        "9 Description that is too long in text format(Here Data is coming from API)" +
-                        "10 Description that is too long in text format(Here Data is coming from API)",
-                    style: new TextStyle(
-                      color: Color.fromRGBO(0, 0, 46, 1),
-                      fontSize: 19,
-                    ),
+            Expanded(
+              flex: 1,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical, //.horizontal
+                padding: EdgeInsets.all(20),
+                child: Text(
+                  'As long as they’re clean and dry, plastic bottles and containers, paper, flattened cardboard, food and beverage cans and containers, and glass bottles and containers can be recycled.\n\nThere are three main categories for discarding waste. If something is non-recyclable, it belongs to the general waste bins. Some goods can be recycled through the general blue recycling bins, and some need to be brought to special facilities to be repurposed. In general, if an item is plastic, but is not a bottle or containers, it probably cannot be recycled through the curbside recycling bins, and will likely need to be taken to a specific location.\n\nWhen recycling, it is imperative that you make sure the material is clean. Used food containers can only be recycled if the food waste is washed out of it-- no liquids can be present either. You cannot recycle plastic bags: this means that you also cannot place all your recyclable items into a plastic bag and then into the recycling bin.\n\nWhen recycling anything, it’s important to double check to make sure that your specific community accepts the material you are trying to recycle. ',
+                  style: new TextStyle(
+                    color: Color.fromRGBO(0, 0, 46, 1),
+                    fontSize: 19,
                   ),
                 ),
               ),
+            ),
             Center(
               child: ElevatedButton(
                 onPressed: () {
@@ -50,26 +41,4 @@ class Info extends StatelessWidget {
       ),
     );
   }
-  /* Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Recycling Information'),
-        backgroundColor: Color.fromRGBO(115, 168, 232, 1),
-      ),
-      body: Container(
-          margin: new EdgeInsets.only(top: 40, left: 18, right: 18),
-          
-          /* Column(children: <Widget>[
-          Text(''),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('Back to Home Page'),
-            ),
-          ),
-        ]), */
-          ),
-    ); */
 }
