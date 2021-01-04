@@ -14,7 +14,7 @@ class PGraph extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Container(
         child: RichText(
       text: TextSpan(
         children: <TextSpan>[
@@ -51,9 +51,9 @@ class PGraph extends StatelessWidget {
                 }),
           TextSpan(text: paragraph),
         ],
-        style: TextStyle(color: Color.fromRGBO(0, 0, 46, 1), fontSize: 20),
+        style: TextStyle(
+            color: Theme.of(context).textSelectionColor, fontSize: 20),
       ),
-      textAlign: TextAlign.center,
     ));
   }
 }
