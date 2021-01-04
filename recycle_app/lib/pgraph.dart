@@ -22,7 +22,8 @@ class PGraph extends StatelessWidget {
               text: link,
               style: TextStyle(
                   // make linked word larger and a light blue
-                  color: Color.fromRGBO(115, 168, 232, 1),
+                  color: Theme.of(context).primaryColor,
+                  fontWeight: FontWeight.w500,
                   fontSize: 30),
               recognizer: new TapGestureRecognizer()
                 ..onTap = () {

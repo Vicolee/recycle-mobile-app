@@ -4,11 +4,12 @@ class Info extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         title: Text(
-          "How To Use",
+          "Info Page",
         ), // style: TextStyle(color: Color.fromRGBO(0, 0, 46, 1))
-        backgroundColor: Color.fromRGBO(115, 168, 232, 1),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Container(
         child: Column(
