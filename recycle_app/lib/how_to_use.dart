@@ -9,28 +9,30 @@ class HowToUse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
           title: Text(
             "How To Use",
-          ), // style: TextStyle(color: Color.fromRGBO(0, 0, 46, 1))
-          backgroundColor: Color.fromRGBO(115, 168, 232, 1),
+          ), // style: TextStyle(color: Color.fromRGBO(10, 10, 82, 1))
+          backgroundColor: Theme.of(context).primaryColor,
         ),
         body: Container(
           margin: new EdgeInsets.only(top: 40, left: 18, right: 18),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Center(
-                child: Text(
-                  'Recycling! is comprised of three pages.',
-                  style: TextStyle(
-                    color: Color.fromRGBO(0, 0, 46, 1),
-                    fontSize: 19,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              Text('\n'),
+              // Center(
+              //   child: Text(
+              //     'Recycling! is comprised of three pages:',
+              //     style: TextStyle(
+              //       color: Theme.of(context).primaryColor,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 19,
+              //     ),
+              //     textAlign: TextAlign.center,
+              //   ),
+              // ),
+              Text(''),
 
               // Information about Camera page
               // the word 'Camera' is linked to the Camera page (see Navigator.push...)
@@ -63,13 +65,12 @@ class HowToUse extends StatelessWidget {
 
               Text('\n'),
 
-              // TODO: COULD CHANGE THIS BUTTON INTO LOGO THAT GOES BACK TO HOME PAGE
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text('Back to Home Page'),
-              )
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.pop(context);
+              //   },
+              //   child: Text('Back to Home Page'),
+              // )
             ],
           ),
         ));
