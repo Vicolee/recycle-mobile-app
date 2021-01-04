@@ -29,14 +29,6 @@ class Info extends StatelessWidget {
                 ),
               ),
             ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text('Back to Home Page'),
-              ),
-            ),
           ],
         ),
       ),

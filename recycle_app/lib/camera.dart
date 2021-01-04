@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
-/*Future<void> main() async {
+Future<void> main() async {
   // Ensure that plugin services are initialized so that `availableCameras()`
   // can be called before `runApp()`
   WidgetsFlutterBinding.ensureInitialized();
@@ -107,7 +107,8 @@ class TakePictureScreenState extends State<Camera> {
             );
 
             // Attempt to take a picture and log where it's been saved.
-            await _controller.takePicture(path);
+            await _controller
+                .takePicture(); //was .takePicture(path); but wouldnt run
 
             // If the picture was taken, display it on a new screen.
             Navigator.push(
@@ -141,8 +142,8 @@ class Results extends StatelessWidget {
       body: Image.file(File(imagePath)),
     );
   }
-}*/
-
+}
+/*
 class Camera extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -162,5 +163,4 @@ class Camera extends StatelessWidget {
       ),
     );
   }
-}
-
+}*/
