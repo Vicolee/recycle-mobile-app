@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
     return Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
-          title: Text('Home Page'),
+          title: Text('Recycling!', style: TextStyle(fontSize: 25)),
           backgroundColor: Theme.of(context).primaryColor,
         ),
         body: Container(
