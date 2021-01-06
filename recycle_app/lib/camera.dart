@@ -87,6 +87,8 @@ class TakePictureScreenState extends State<Camera> {
             // Attempt to take a picture and log where it's been saved.
             await _controller.takePicture(path);
 
+            print(path);
+
             // If the picture was taken, display it on a new screen.
             Navigator.push(
               context,
@@ -113,11 +115,29 @@ class DisplayPictureScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Display the Picture')),
-      // The image is stored as a file on the device. Use the `Image.file`
-      // constructor with the given path to display the image.
-      body: Image.file(File(imagePath)),
-    );
+        appBar: AppBar(title: Text('Display the Picture')),
+        // The image is stored as a file on the device. Use the `Image.file`
+        // constructor with the given path to display the image.
+        body: Container(
+          child: Column(
+            children: [
+              Center(child: Image.file(File(imagePath))),
+              Center(
+                child: RaisedButton(
+                  child: Text('Which Bin?', style: TextStyle(fontSize: 30)),
+                  onPressed: () {
+                    Text("prseed");
+
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => Results())
+                    // )
+                  },
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
 
