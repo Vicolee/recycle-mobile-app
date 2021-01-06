@@ -1,0 +1,6 @@
+plastic
+glass
+metal
+electronics
+paper
+non_recyclable

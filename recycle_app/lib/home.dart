@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:recycle_app/camera.dart';
 import 'package:recycle_app/how_to_use.dart';
 import 'package:recycle_app/info.dart';
+import 'package:camera/camera.dart';
+
+import "package:flutter/material.dart";
+import 'package:recycle_app/results.dart';
+
+import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
+import 'package:path/path.dart' show join;
+import 'package:path_provider/path_provider.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -30,10 +39,25 @@ class Home extends StatelessWidget {
                     child:
                         Text('Take A Picture', style: TextStyle(fontSize: 30)),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Camera()),
-                      );
+                      Future<void> setupCameras() async {
+                        // Ensure that plugin services are initialized so that `availableCameras()`
+                        // can be called before `runApp()`
+                        WidgetsFlutterBinding.ensureInitialized();
+
+                        // Obtain a list of the available cameras on the device.
+                        final cameras = await availableCameras();
+
+                        // Get a specific camera from the list of available cameras.
+                        final firstCamera = cameras.first;
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Camera(camera: firstCamera),
+                            ));
+                      }
+
+                      setupCameras();
                     },
                   ),
                 ),

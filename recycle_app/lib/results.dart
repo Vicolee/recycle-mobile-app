@@ -11,6 +11,10 @@ class Results extends StatelessWidget {
       "recycling this in a regular blue bin. BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH";
   var thankyou =
       "We appreciate you taking the time to determine how best to recycle. Your efforts are vital to combatting the evergrowing threat of climate change.";
+  final imagepath;
+
+  Results(this.imagepath);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
