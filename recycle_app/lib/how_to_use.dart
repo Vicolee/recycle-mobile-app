@@ -11,29 +11,32 @@ class HowToUse extends StatelessWidget {
     return Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
-          title: Text(
-            "How To Use",
-          ), // style: TextStyle(color: Color.fromRGBO(0, 0, 46, 1))
+          title: Text("How To Use",
+              style: TextStyle(
+                  fontSize:
+                      25)), // style: TextStyle(color: Color.fromRGBO(10, 10, 82, 1))
           backgroundColor: Theme.of(context).primaryColor,
         ),
         body: Container(
-          child: CustomScrollView(
-            slivers: [
+            margin: new EdgeInsets.only(top: 30, left: 20, right: 20),
+            child: CustomScrollView(slivers: [
               SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    Center(
-                      child: Text(
-                        'Recycling! is comprised of three pages.',
-                        style: TextStyle(
-                          color: Theme.of(context).primaryColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 19,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Text('\n'),
+                  delegate: SliverChildListDelegate([
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    // Center(
+                    //   child: Text(
+                    //     'Recycling! is comprised of three pages:',
+                    //     style: TextStyle(
+                    //       color: Theme.of(context).primaryColor,
+                    //       fontWeight: FontWeight.bold,
+                    //       fontSize: 19,
+                    //     ),
+                    //     textAlign: TextAlign.center,
+                    //   ),
+                    // ),
+                    Text(''),
 
                     // Information about Camera page
                     // the word 'Camera' is linked to the Camera page (see Navigator.push...)
@@ -74,9 +77,7 @@ class HowToUse extends StatelessWidget {
                     // )
                   ],
                 ),
-              ),
-            ],
-          ),
-        ));
+              ]))
+            ])));
   }
 }

@@ -14,7 +14,7 @@ class PGraph extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Container(
         child: RichText(
       text: TextSpan(
         children: <TextSpan>[
@@ -24,7 +24,7 @@ class PGraph extends StatelessWidget {
                   // make linked word larger and a light blue
                   color: Theme.of(context).primaryColor,
                   fontWeight: FontWeight.w500,
-                  fontSize: 30),
+                  fontSize: 40),
               recognizer: new TapGestureRecognizer()
                 ..onTap = () {
                   // if link is camera, set link to Camera class
@@ -51,9 +51,9 @@ class PGraph extends StatelessWidget {
                 }),
           TextSpan(text: paragraph),
         ],
-        style: TextStyle(color: Color.fromRGBO(0, 0, 46, 1), fontSize: 20),
+        style: TextStyle(
+            color: Theme.of(context).textSelectionColor, fontSize: 23),
       ),
-      textAlign: TextAlign.center,
     ));
   }
 }

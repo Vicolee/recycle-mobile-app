@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'dart:io';
+import "package:flutter/material.dart";
+import 'package:recycle_app/results.dart';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -151,14 +153,22 @@ class Camera extends StatelessWidget {
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text("Camera"),
+        title: Text("Camera", style: TextStyle(fontSize: 25)),
       ),
       body: Center(
-        child: ElevatedButton(
+        child: RaisedButton(
+          color: Theme.of(context).focusColor,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          padding: EdgeInsets.all(15),
+          textColor: Colors.white,
+          child: Text('Results', style: TextStyle(fontSize: 30)),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Results()),
+            );
           },
-          child: Text('Back to Home Page'),
         ),
       ),
     );
