@@ -1,10 +1,13 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:tflite/tflite.dart';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
+import 'package:recycle_app/predict.dart';
+import 'predict.dart';
 
 // A screen that allows users to take a picture using a given camera.
 class Camera extends StatefulWidget {
@@ -107,10 +110,27 @@ class TakePictureScreenState extends State<Camera> {
 }
 
 // A widget that displays the picture taken by the user.
-class DisplayPictureScreen extends StatelessWidget {
+class DisplayPictureScreen extends StatefulWidget {
   final String imagePath;
 
   const DisplayPictureScreen({Key key, this.imagePath}) : super(key: key);
+
+  @override
+  _DisplayPictureScreenState createState() => _DisplayPictureScreenState();
+}
+
+class _DisplayPictureScreenState extends State<DisplayPictureScreen> {
+  String result;
+
+  Future classifyImage() async {
+    await Tflite.loadModel(
+        model: "assets/recycle_detection_model.tflite",
+        labels: "assets/labels.txt");
+    var output = await Tflite.runModelOnImage(path: widget.imagePath);
+    setState(() {
+      result = output.toString();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,20 +141,14 @@ class DisplayPictureScreen extends StatelessWidget {
         body: Container(
           child: Column(
             children: [
-              Center(child: Image.file(File(imagePath))),
+              Center(child: Image.file(File(widget.imagePath))),
               Center(
                 child: RaisedButton(
-                  child: Text('Which Bin?', style: TextStyle(fontSize: 30)),
-                  onPressed: () {
-                    Text("prseed");
-
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Results())
-                    // )
-                  },
+                  child: Text('Predict', style: TextStyle(fontSize: 30)),
+                  onPressed: () => classifyImage(),
                 ),
-              )
+              ),
+              result == null ? Text('Results') : Text(result)
             ],
           ),
         ));
