@@ -8,6 +8,9 @@ import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 import 'package:recycle_app/predict.dart';
 import 'predict.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:recycle_app/tensorflow_lite_flutter/helpers/app_helper.dart';
+import 'package:recycle_app/tensorflow_lite_flutter/helpers/tflite_helper.dart';
 
 // A screen that allows users to take a picture using a given camera.
 class Camera extends StatefulWidget {
@@ -121,16 +124,48 @@ class DisplayPictureScreen extends StatefulWidget {
 
 class _DisplayPictureScreenState extends State<DisplayPictureScreen> {
   String result;
+  // File _image;
+  List _recognitions;
+  final picker = ImagePicker();
 
-  Future classifyImage() async {
-    await Tflite.loadModel(
-        model: "assets/recycle_detection_model.tflite",
-        labels: "assets/labels.txt");
-    var output = await Tflite.runModelOnImage(path: widget.imagePath);
-    setState(() {
-      result = output.toString();
+  // Future getImage() async {
+  //   final pickedFile = await picker.getImage(source: ImageSource.camera);
+
+  //   setState(() {
+  //     if (pickedFile != null) {
+  //       _image = File(pickedFile.path);
+  //     } else {
+  //       print('No image selected.');
+  //     }
+  //   });
+  // }
+
+  // Future predictImage(File image) async {
+  //   if (image == null) return;
+
+  void initState() {
+    super.initState();
+
+    //Load TFLite Model
+    TFLiteHelper.loadModel().then((value) {
+      setState(() {
+        TFLiteHelper.modelLoaded = true;
+      });
     });
   }
+
+  // Future classifyImage() async {
+  //   // AppHelper.log("classifyImage", "start");
+  //   await Tflite.loadModel(
+  //       model: "assets/recycle_detection_model.tflite",
+  //       labels: "assets/labels.txt");
+  //   print("model: " + result);
+  //   var recognitions =
+  //       await Tflite.runModelOnImage(path: widget.imagePath, numResults: 6);
+  //   setState(() {
+  //     _recognitions = recognitions;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -145,10 +180,16 @@ class _DisplayPictureScreenState extends State<DisplayPictureScreen> {
               Center(
                 child: RaisedButton(
                   child: Text('Predict', style: TextStyle(fontSize: 30)),
-                  onPressed: () => classifyImage(),
+                  onPressed: () {
+                    // AppHelper.log("test", "test");
+                    _recognitions =
+                        TFLiteHelper.classifyImage(widget.imagePath);
+                  },
                 ),
               ),
-              result == null ? Text('Results') : Text(result)
+              _recognitions == null
+                  ? Text(_recognitions.toString())
+                  : Text(_recognitions.toString())
             ],
           ),
         ));
