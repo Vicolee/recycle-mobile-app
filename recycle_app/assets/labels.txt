@@ -3,4 +3,4 @@ glass
 metal
 electronics
 paper
-non_recyclable
+non-recyclable

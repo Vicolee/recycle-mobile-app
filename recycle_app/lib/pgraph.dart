@@ -31,7 +31,9 @@ class PGraph extends StatelessWidget {
                   if (link == 'Camera:') {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Camera()),
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              CameraScreen(title: 'Predict Bin')),
                     );
                     // if link is info, set link to Info class
                   } else if (link == 'How to Recycle:') {

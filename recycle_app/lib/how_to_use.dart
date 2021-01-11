@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:recycle_app/camera.dart';
 import 'package:recycle_app/how_to_use.dart';
 import 'package:recycle_app/info.dart';
 import 'package:recycle_app/pgraph.dart';
@@ -68,13 +67,6 @@ class HowToUse extends StatelessWidget {
                             ' The page you are currently on that tells you how to utilize the features of Recycling! most optimally.'),
 
                     Text('\n'),
-
-                    // ElevatedButton(
-                    //   onPressed: () {
-                    //     Navigator.pop(context);
-                    //   },
-                    //   child: Text('Back to Home Page'),
-                    // )
                   ],
                 ),
               ]))
