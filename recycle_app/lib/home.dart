@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
             child: Column(
               children: [
                 Image(
-                    image: AssetImage('assets/images/download.jpg'),
+                    image: AssetImage('assets/images/turtle.png'),
                     width: 250,
                     height: 250),
                 Center(

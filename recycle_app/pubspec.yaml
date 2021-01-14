@@ -64,6 +64,7 @@ flutter:
      - assets/recycle_detection_model.tflite
      - assets/labels.txt
      - assets/recycle_detection_model.h5
+     - assets/images/turtle.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
