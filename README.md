@@ -11,6 +11,6 @@ We used [Flutter](https://flutter.dev/) to develop our application.
 ## Installation
 In order to install our application, it needs to be uploaded to the App Store or the Google Play Store, or it can be run on an iOS or Android simulator.
 ## How-to-Use
-To use this app, open it, and from the home page, navigate to the camera page. There, you can take an image of whatever item you are trying to recycle.
+To use this app, open it, and from the home page, navigate to the camera page. There, you can take an image of whatever item you are trying to recycle. 
 ## Credits
 We relied heavily on the course Flutter Crash Course for Beginners 2020 by Academind to learn how to do flutter.
