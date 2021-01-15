@@ -1,5 +1,4 @@
 # Recycle-App
-An app to identify which bin an object belongs to.
 
 ## Table of Contents
 
@@ -9,9 +8,9 @@ An app to identify which bin an object belongs to.
 
 3. [Setup Mobile App](#3-setup-mobile-app-(ios/android))
 
-        * [Run Mobile App Via Simulator](#run mobile-app-via-simulator)
+* [Run Mobile App Via Simulator](#run mobile-app-via-simulator)
 
-        * [Run Mobile App on Device](#run-mobile-app-on-device)
+* [Run Mobile App on Device](#run-mobile-app-on-device)
 
 4. [App Features](#4-app-features)
 
@@ -28,7 +27,7 @@ An app to identify which bin an object belongs to.
 This is a mobile application that uses the flutter framework and dart programming language. The mobile application aims to help users seamlessly identify whether an object is recyclable and which bin to discard it into.
 
 ## 2. Motivation
-We created this app as a part of the Cisco Hack-a-Thon, but our primary motivation arose from the blatant lack of knowledge about what can be recycled, and what cannot be. When materials that cannot be recycled are placed in the recycling bin, they sometimes cannot be sorted out, and the entire batch is sent to general waste. This app is meant to serve as a solution to increase the amount recycling we do.
+We created this app as a part of the [Cisco Webex Hackathon](https://innovationchallenge.cisco.com/), but our primary motivation arose from the blatant lack of knowledge about what can be recycled, and what cannot be. When materials that cannot be recycled are placed in the recycling bin, they sometimes cannot be sorted out, and the entire batch is sent to general waste. This app is meant to serve as a solution to increase the amount recycling we do.
 
 ## 3. Setup Mobile App (ios/android)
 
