@@ -41,6 +41,7 @@ $ git clone git@github.com:recycle-app/recycle-app.git
 Then change your directory to the flutter app
 ````
 $ cd recycle-app
+$ cd recycle_app
 ````
 To run the app, do
 ```
