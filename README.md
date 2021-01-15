@@ -90,11 +90,10 @@ We pretrained our neural network on [Google Colab](https://colab.research.google
 
 Refer to [pubspec.yaml](recycle_app/pubspec.yaml) for the other libraries used.
 
-## 6. How-to-Use
+## 6. How To Use
 To use this app, open it, and from the home page, navigate to the camera page. There, you can take an image of whatever item you are trying to recycle. 
 
 ## 7. Further Work
-Further Work:
 
 1. To improve accuracy. The dataset that we trained our neural network on contains plenty of unclean data. For instance, among the images of the plastic bottles that we trained included birds and humans. These data were scraped 	using the Flickr API. Thus, to further increase the accuracy of predicting an object, we could either scrape more data and/or clean the current dataset that we have.
 We could also add more layers as what we have comprised of a simple neural network as we didn’t have the time and resource to train the neural network for longer durations.
