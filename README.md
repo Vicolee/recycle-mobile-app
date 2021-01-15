@@ -22,6 +22,8 @@
 
 8. [References](#references)
 
+9. [Contributing](#contributing)
+
 ## 1. Introduction
 
 This is a mobile application that uses the flutter framework and dart programming language. The mobile application aims to help users seamlessly identify whether an object is recyclable and which bin to discard it into.
@@ -106,3 +108,6 @@ We could also add more layers as what we have comprised of a simple neural netwo
 * [Flutter Tutorial](https://flutter.dev/docs/reference/tutorials)
 * [Flutter Tensorflow Lite Deployment](https://medium.com/flutterdevs/implementing-tensorflow-lite-in-flutter-c21738e9d35c)
 * [Flickr Photos Search API](https://www.flickr.com/services/api/flickr.photos.search.html)
+
+## 9. Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
