@@ -8,7 +8,7 @@
 
 3. [Setup Mobile App](#3-setup-mobile-app-iosandroid)
 
-    * [Run Mobile App Via Simulator](#run- mobile-app-via-simulator)
+    * [Run Mobile App Via Simulator](#run-mobile-app-via-simulator)
 
     * [Run Mobile App on Device](#run-mobile-app-on-device)
 
@@ -54,7 +54,7 @@ To access the camera feature, you need to use your phone to install the app. See
 
 Recording of Features.
 
-<img src="recycle_app/assets/images/video.png" width="325" height="600" />
+<img src="recycle_app/assets/images/video.png" width="500" height="600" />
 
 Hover camera over the plastics:
 
