@@ -52,9 +52,9 @@ To access the camera feature, you need to use your phone to install the app. See
 
 ## 4. App Features 
 
-Recording of Features
+Recording of Features.
 
-[![App Feature Video](recycle_app/assets/images/video.jpg)](https://youtu.be/RYaHJ8xScBY)
+<img src="recycle_app/assets/images/video.png" width="325" height="600" />
 
 Hover camera over the plastics:
 
