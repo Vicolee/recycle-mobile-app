@@ -1,4 +1,4 @@
-# Recycle-App
+# Recycle-Mobile-App
 
 ## Table of Contents
 
